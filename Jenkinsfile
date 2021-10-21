@@ -1,5 +1,5 @@
 pipeline {
-  agent none
+  agent any
   stages {
     stage('blue') {
       steps {
@@ -7,5 +7,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    stage = 'test'
   }
 }
